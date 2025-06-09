@@ -1,0 +1,20 @@
+how to connect to kubernates eks from the bastion host
+
+1. aws configure (provide all the details of AWS)
+2. run terraform backend code 
+3. run terraform eks cluster code
+4. aws eks update-kubeconfig --region ap-south-1 --name my-eks-cluster
+5. kubecl config view
+6. kubectl config current-context
+7. ubuntu@ip-172-31-44-53:~/ultimate-devops-project-demo/kubernetes$ kubectl apply -f serviceaccount.yaml (for deploying the service account)
+8. ubuntu@ip-172-31-44-53:~/ultimate-devops-project-demo/kubernetes$ kubectl apply -f complete-deploy.yaml (for deploying the project)
+9. kubectl get pods -n kube-system ( confirm ALB is running)
+To create S3 bucket and DB ( cd backend)
+terraform init 
+terraform plan
+terraform apply
+
+to create the eks cluster (cd terraform-scripts)
+terraform init 
+terrafrom plan 
+terraform apply
